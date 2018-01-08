@@ -16,7 +16,7 @@ typedef void(^ClickDelBtnBlock)(NSInteger index);
 @property(nonatomic,strong)UITableView *tableView;//自定义边框
 @property(nonatomic,copy)UIFont *textFont;//字体大小
 @property(nonatomic,copy)UIColor *textColor;//字体颜色
-@property(nonatomic,strong)NSArray *dataArr;//字符串数组
+@property(nonatomic,copy)NSArray *dataArr;//字符串数组
 @property(nonatomic,assign)BOOL isNeedBorder;//是否需要边框
 
 @property(nonatomic,copy)ClickDelBtnBlock clickDelBtnBlock;//删除事件
@@ -51,8 +51,8 @@ typedef void(^ClickDelBtnBlock)(NSInteger index);
 
 @interface TamAlertTableViewCell : UITableViewCell
 
-@property(nonatomic,strong)id<TamAlertTableViewCellDelegate> delegate;
-@property(nonatomic,strong)UILabel *titleLabel;
+@property(nonatomic,weak)id<TamAlertTableViewCellDelegate> delegate;
+@property(nonatomic,weak)UILabel *titleLabel;
 +(instancetype)alertTableViewCellWithTableView:(UITableView *)tableView isShowLineView:(BOOL)isShowLineView;
 
 @end

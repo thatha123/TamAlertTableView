@@ -15,7 +15,7 @@ static const int DefRowH = 40;//默认cell高
 
 @interface TamAlertTableView()<UITableViewDelegate,UITableViewDataSource,TamAlertTableViewCellDelegate>
 
-@property(nonatomic,strong)SelectBlock selectBlock;
+@property(nonatomic,copy)SelectBlock selectBlock;
 @property(nonatomic,assign)CGFloat rowH;
 @property(nonatomic,assign)BOOL isShowLineView;
 
